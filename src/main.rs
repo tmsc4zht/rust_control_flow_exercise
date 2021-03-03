@@ -28,9 +28,8 @@ fn fibonacci_number(n: u32) -> u32 {
 
     let mut x: (u32, u32) = (1, 1);
 
-    for i in 0..n - 1 {
+    for _ in 0..n - 1 {
         x = (x.1, x.0 + x.1);
-        println!("{}:{}", i + 2, x.1)
     }
 
     return x.1;
