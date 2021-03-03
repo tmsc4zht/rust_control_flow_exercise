@@ -9,6 +9,8 @@ fn main() {
 
     let n = 10;
     println!("{}th Fibonacci number is {}", n, fibonacci_number(n));
+
+    the_twelve_days_of_christmas();
 }
 
 fn celsius_to_fahrenheit(celcius: f32) -> f32 {
@@ -32,4 +34,14 @@ fn fibonacci_number(n: u32) -> u32 {
     }
 
     return x.1;
+}
+
+fn the_twelve_days_of_christmas() {
+    for i in 1..13 {
+        n_day_of_christmas(i)
+    }
+}
+
+fn n_day_of_christmas(n: u8) {
+    println!("{}", n)
 }
