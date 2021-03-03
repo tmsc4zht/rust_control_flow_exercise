@@ -59,7 +59,7 @@ fn the_twelve_days_of_christmas() {
     ];
 
     for i in 0..12 {
-        println!("{}.", i + 1);
+        println!("[Verse {}]", i + 1);
         println!("On the {} day of Christmas,", ordinal_numeral[i]);
         println!("my true love sent to me");
 
