@@ -45,11 +45,39 @@ fn the_twelve_days_of_christmas() {
 }
 
 fn n_day_of_christmas(n: usize) {
+    // https://genius.com/Christmas-songs-the-twelve-days-of-christmas-lyrics
     let ordinal_numeral = [
         "first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth", "ninth",
         "tenth", "eleventh", "twelfth",
     ];
 
+    let presents = [
+        "A partridge in a pear tree",
+        "Two turtle doves",
+        "Three french hens",
+        "Four calling birds",
+        "Five golden rings",
+        "Six geese a-laying",
+        "Seven swans a-swimming",
+        "Eight maids a-milking",
+        "Nine ladies dancing",
+        "Ten lords a-leaping",
+        "Eleven pipers piping",
+        "Twelve drummers drumming",
+    ];
+
+    let presents = &presents[0..n + 1];
+
     println!("On the {} day of Christmas,", ordinal_numeral[n]);
-    println!("my true love sent to me.");
+    println!("my true love sent to me");
+
+    if presents.len() >= 3 {
+        for idx in (2..presents.len()).rev() {
+            println!("{}", presents[idx])
+        }
+    }
+    if presents.len() >= 2 {
+        println!("{}, and", presents[1]);
+    }
+    println!("{}", presents[0]);
 }
