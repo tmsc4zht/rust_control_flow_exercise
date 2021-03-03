@@ -37,11 +37,19 @@ fn fibonacci_number(n: u32) -> u32 {
 }
 
 fn the_twelve_days_of_christmas() {
-    for i in 1..13 {
-        n_day_of_christmas(i)
+    for i in 0..12 {
+        println!("{}.", i + 1);
+        n_day_of_christmas(i);
+        println!("");
     }
 }
 
-fn n_day_of_christmas(n: u8) {
-    println!("{}", n)
+fn n_day_of_christmas(n: usize) {
+    let ordinal_numeral = [
+        "first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth", "ninth",
+        "tenth", "eleventh", "twelfth",
+    ];
+
+    println!("On the {} day of Christmas,", ordinal_numeral[n]);
+    println!("my true love sent to me.");
 }
